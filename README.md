@@ -11,7 +11,7 @@ How to include the API with Maven:
 </repositories>
 <dependencies>
     <dependency>
-        <groupId>com.github.sculmix</groupId>
+        <groupId>com.github.flestiz</groupId>
         <artifactId>API-ECosmetics</artifactId>
         <version>LAST-VERSION</version>
         <scope>provided</scope>
@@ -26,6 +26,6 @@ repositories {
     maven { url 'https://jitpack.io' }
 }
 dependencies {
-    compileOnly "com.github.sculmix:API-ECosmetics:LAST-VERSION"
+    compileOnly "com.github.flestiz:API-ECosmetics:LAST-VERSION"
 }
 ```
