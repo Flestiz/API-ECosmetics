@@ -1,4 +1,4 @@
-package ru.sculmix.ecosmetics.api;
+package ru.flestiz.ecosmetics.api;
 
 public enum CosmeticType {
     HAT,

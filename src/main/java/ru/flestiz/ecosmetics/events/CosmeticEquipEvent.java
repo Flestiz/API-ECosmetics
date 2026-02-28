@@ -1,19 +1,19 @@
-package ru.sculmix.ecosmetics.events;
+package ru.flestiz.ecosmetics.events;
 
-import ru.sculmix.ecosmetics.api.Cosmetic;
-import ru.sculmix.ecosmetics.api.CosmeticType;
-import ru.sculmix.ecosmetics.utils.MCNotInstalledException;
+import ru.flestiz.ecosmetics.api.Cosmetic;
+import ru.flestiz.ecosmetics.api.CosmeticType;
+import ru.flestiz.ecosmetics.utils.MCNotInstalledException;
 import org.bukkit.entity.Player;
 import org.bukkit.event.Cancellable;
 import org.bukkit.event.HandlerList;
 import org.bukkit.event.player.PlayerEvent;
 
 /**
- *  Called when player unequipped a cosmetic
+ * Event called when player equip a cosmetic
  */
-public class CosmeticUnEquipEvent extends PlayerEvent implements Cancellable {
+public class CosmeticEquipEvent extends PlayerEvent implements Cancellable {
 
-    public CosmeticUnEquipEvent(Player player, Cosmetic cosmetic) {
+    public CosmeticEquipEvent(Player player, Cosmetic cosmetic) {
         super(player);
         throw new MCNotInstalledException();
     }
@@ -24,10 +24,6 @@ public class CosmeticUnEquipEvent extends PlayerEvent implements Cancellable {
     }
 
     public static HandlerList getHandlerList() {
-        throw new MCNotInstalledException();
-    }
-
-    public Cosmetic getCosmetic() {
         throw new MCNotInstalledException();
     }
 
@@ -44,4 +40,9 @@ public class CosmeticUnEquipEvent extends PlayerEvent implements Cancellable {
     public void setCancelled(boolean cancel) {
         throw new MCNotInstalledException();
     }
+
+    public Cosmetic getCosmetic() {
+        throw new MCNotInstalledException();
+    }
+
 }

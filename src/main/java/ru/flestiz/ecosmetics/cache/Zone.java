@@ -1,6 +1,6 @@
-package ru.sculmix.ecosmetics.cache;
+package ru.flestiz.ecosmetics.cache;
 
-import ru.sculmix.ecosmetics.utils.MCNotInstalledException;
+import ru.flestiz.ecosmetics.utils.MCNotInstalledException;
 import org.bukkit.Location;
 import org.bukkit.block.Block;
 

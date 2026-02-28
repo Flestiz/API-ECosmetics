@@ -1,19 +1,18 @@
-package ru.sculmix.ecosmetics.events;
+package ru.flestiz.ecosmetics.events;
 
-import ru.sculmix.ecosmetics.api.Cosmetic;
-import ru.sculmix.ecosmetics.api.CosmeticType;
-import ru.sculmix.ecosmetics.utils.MCNotInstalledException;
+import ru.flestiz.ecosmetics.cache.Zone;
+import ru.flestiz.ecosmetics.utils.MCNotInstalledException;
 import org.bukkit.entity.Player;
 import org.bukkit.event.Cancellable;
 import org.bukkit.event.HandlerList;
 import org.bukkit.event.player.PlayerEvent;
 
 /**
- * Event called when player equip a cosmetic
+ * Event called when a player enters a zone.
  */
-public class CosmeticEquipEvent extends PlayerEvent implements Cancellable {
+public class ZoneEnterEvent extends PlayerEvent implements Cancellable {
 
-    public CosmeticEquipEvent(Player player, Cosmetic cosmetic) {
+    public ZoneEnterEvent(Player player, Zone zone) {
         super(player);
         throw new MCNotInstalledException();
     }
@@ -27,7 +26,7 @@ public class CosmeticEquipEvent extends PlayerEvent implements Cancellable {
         throw new MCNotInstalledException();
     }
 
-    public CosmeticType getCosmeticType() {
+    public Zone getZone() {
         throw new MCNotInstalledException();
     }
 
@@ -40,9 +39,4 @@ public class CosmeticEquipEvent extends PlayerEvent implements Cancellable {
     public void setCancelled(boolean cancel) {
         throw new MCNotInstalledException();
     }
-
-    public Cosmetic getCosmetic() {
-        throw new MCNotInstalledException();
-    }
-
 }

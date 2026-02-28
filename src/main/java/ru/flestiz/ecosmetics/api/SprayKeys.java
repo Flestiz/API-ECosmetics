@@ -1,6 +1,6 @@
-package ru.sculmix.ecosmetics.api;
+package ru.flestiz.ecosmetics.api;
 
-import ru.sculmix.ecosmetics.utils.MCNotInstalledException;
+import ru.flestiz.ecosmetics.utils.MCNotInstalledException;
 
 public enum SprayKeys {
     SHIFT_F,

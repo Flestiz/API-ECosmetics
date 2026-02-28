@@ -1,7 +1,7 @@
-package ru.sculmix.ecosmetics.api;
+package ru.flestiz.ecosmetics.api;
 
-import ru.sculmix.ecosmetics.cache.PlayerData;
-import ru.sculmix.ecosmetics.utils.MCNotInstalledException;
+import ru.flestiz.ecosmetics.cache.PlayerData;
+import ru.flestiz.ecosmetics.utils.MCNotInstalledException;
 import org.bukkit.Color;
 import org.bukkit.OfflinePlayer;
 import org.bukkit.entity.Entity;
@@ -12,7 +12,7 @@ import java.util.Set;
 import java.util.UUID;
 
 /**
- * MagicAPI is a class that provides a simple way to access MagicCosmetics.
+ * MagicAPI is a class that provides a simple way to access ECosmetics.
  */
 public class MagicAPI {
     /**

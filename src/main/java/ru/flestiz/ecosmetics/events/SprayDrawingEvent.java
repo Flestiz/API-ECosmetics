@@ -1,7 +1,7 @@
-package ru.sculmix.ecosmetics.events;
+package ru.flestiz.ecosmetics.events;
 
-import ru.sculmix.ecosmetics.api.SprayKeys;
-import ru.sculmix.ecosmetics.utils.MCNotInstalledException;
+import ru.flestiz.ecosmetics.api.SprayKeys;
+import ru.flestiz.ecosmetics.utils.MCNotInstalledException;
 import org.bukkit.block.Block;
 import org.bukkit.entity.Player;
 import org.bukkit.event.Cancellable;

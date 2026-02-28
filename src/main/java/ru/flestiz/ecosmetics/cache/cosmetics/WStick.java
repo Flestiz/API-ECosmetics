@@ -1,7 +1,7 @@
-package ru.sculmix.ecosmetics.cache.cosmetics;
+package ru.flestiz.ecosmetics.cache.cosmetics;
 
-import ru.sculmix.ecosmetics.api.Cosmetic;
-import ru.sculmix.ecosmetics.utils.MCNotInstalledException;
+import ru.flestiz.ecosmetics.api.Cosmetic;
+import ru.flestiz.ecosmetics.utils.MCNotInstalledException;
 import org.bukkit.entity.Player;
 import org.bukkit.inventory.ItemStack;
 

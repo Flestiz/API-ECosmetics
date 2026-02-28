@@ -1,8 +1,8 @@
-package ru.sculmix.ecosmetics.events;
+package ru.flestiz.ecosmetics.events;
 
-import ru.sculmix.ecosmetics.api.Cosmetic;
-import ru.sculmix.ecosmetics.cache.PlayerData;
-import ru.sculmix.ecosmetics.utils.MCNotInstalledException;
+import ru.flestiz.ecosmetics.api.Cosmetic;
+import ru.flestiz.ecosmetics.cache.PlayerData;
+import ru.flestiz.ecosmetics.utils.MCNotInstalledException;
 import org.bukkit.event.Event;
 import org.bukkit.event.HandlerList;
 

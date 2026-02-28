@@ -1,10 +1,10 @@
-package ru.sculmix.ecosmetics.cache;
+package ru.flestiz.ecosmetics.cache;
 
-import ru.sculmix.ecosmetics.api.Cosmetic;
-import ru.sculmix.ecosmetics.api.CosmeticType;
-import ru.sculmix.ecosmetics.cache.cosmetics.Hat;
-import ru.sculmix.ecosmetics.cache.cosmetics.WStick;
-import ru.sculmix.ecosmetics.utils.MCNotInstalledException;
+import ru.flestiz.ecosmetics.api.Cosmetic;
+import ru.flestiz.ecosmetics.api.CosmeticType;
+import ru.flestiz.ecosmetics.cache.cosmetics.Hat;
+import ru.flestiz.ecosmetics.cache.cosmetics.WStick;
+import ru.flestiz.ecosmetics.utils.MCNotInstalledException;
 import org.bukkit.OfflinePlayer;
 
 import java.util.List;

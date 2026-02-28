@@ -1,4 +1,4 @@
-package ru.sculmix.ecosmetics.cache.cosmetics;
+package ru.flestiz.ecosmetics.cache.cosmetics;
 
 import org.bukkit.inventory.ItemStack;
 
