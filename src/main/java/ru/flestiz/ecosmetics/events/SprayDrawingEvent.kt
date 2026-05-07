@@ -1,57 +1,28 @@
-package ru.flestiz.ecosmetics.events;
+package ru.flestiz.ecosmetics.events
 
-import ru.flestiz.ecosmetics.api.SprayKeys;
-import ru.flestiz.ecosmetics.utils.MCNotInstalledException;
-import org.bukkit.block.Block;
-import org.bukkit.entity.Player;
-import org.bukkit.event.Cancellable;
-import org.bukkit.event.HandlerList;
-import org.bukkit.event.player.PlayerEvent;
+import org.bukkit.block.Block
+import org.bukkit.entity.Player
+import org.bukkit.event.Cancellable
+import org.bukkit.event.HandlerList
+import org.bukkit.event.player.PlayerEvent
+import ru.flestiz.ecosmetics.api.SprayKeys
+import ru.flestiz.ecosmetics.utils.MCNotInstalledException
 
-/**
- * Event called when a player is drawing a spray.
- */
-public class SprayDrawingEvent extends PlayerEvent implements Cancellable {
+class SprayDrawingEvent(
+    player: Player,
+    private val sprayedBlock: Block,
+    private val key: SprayKeys
+) : PlayerEvent(player), Cancellable {
+    init { throw MCNotInstalledException() }
 
-    public SprayDrawingEvent(Player player, Block sprayedBlock, SprayKeys key) {
-        super(player);
-        throw new MCNotInstalledException();
+    companion object {
+        @JvmStatic fun getHandlerList(): HandlerList = throw MCNotInstalledException()
     }
 
-    /**
-     * Gets the key of the spray being drawn.
-     *
-     * @return the key of the spray being drawn.
-     */
-    public SprayKeys getKey() {
-        throw new MCNotInstalledException();
-    }
+    override fun getHandlers(): HandlerList = throw MCNotInstalledException()
+    override fun isCancelled(): Boolean = throw MCNotInstalledException()
+    override fun setCancelled(cancel: Boolean): Unit = throw MCNotInstalledException()
 
-    /**
-     * Gets the block being sprayed.
-     *
-     * @return the block being sprayed.
-     */
-    public Block getSprayedBlock() {
-        throw new MCNotInstalledException();
-    }
-
-    @Override
-    public HandlerList getHandlers() {
-        throw new MCNotInstalledException();
-    }
-
-    public static HandlerList getHandlerList() {
-        throw new MCNotInstalledException();
-    }
-
-    @Override
-    public boolean isCancelled() {
-        throw new MCNotInstalledException();
-    }
-
-    @Override
-    public void setCancelled(boolean cancel) {
-        throw new MCNotInstalledException();
-    }
+    fun getKey(): SprayKeys = throw MCNotInstalledException()
+    fun getSprayedBlock(): Block = throw MCNotInstalledException()
 }

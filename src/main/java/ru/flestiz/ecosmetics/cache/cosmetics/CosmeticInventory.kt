@@ -1,12 +1,10 @@
-package ru.flestiz.ecosmetics.cache.cosmetics;
+package ru.flestiz.ecosmetics.cache.cosmetics
 
-import org.bukkit.inventory.ItemStack;
+import org.bukkit.inventory.ItemStack
 
-public interface CosmeticInventory {
-    ItemStack changeItem(ItemStack originalItem);
-    void leftItem();
-
-    ItemStack leftItemAndGet();
-
-    ItemStack getCurrentItemSaved();
+interface CosmeticInventory {
+    fun changeItem(originalItem: ItemStack): ItemStack
+    fun leftItem()
+    fun leftItemAndGet(): ItemStack
+    fun getCurrentItemSaved(): ItemStack
 }

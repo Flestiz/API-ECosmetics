@@ -1,28 +1,20 @@
-package ru.flestiz.ecosmetics.events;
+package ru.flestiz.ecosmetics.events
 
-import ru.flestiz.ecosmetics.utils.MCNotInstalledException;
-import org.bukkit.entity.Player;
-import org.bukkit.event.HandlerList;
-import org.bukkit.event.player.PlayerEvent;
+import org.bukkit.entity.Player
+import org.bukkit.event.HandlerList
+import org.bukkit.event.player.PlayerEvent
+import ru.flestiz.ecosmetics.utils.MCNotInstalledException
 
-/**
- *  The event is called when the player enters or leaves a world within the blacklist.
- */
-public class PlayerChangeBlacklistEvent extends PlayerEvent {
+class PlayerChangeBlacklistEvent(
+    player: Player,
+    private val inWorldBlacklist: Boolean
+) : PlayerEvent(player) {
+    init { throw MCNotInstalledException() }
 
-    public PlayerChangeBlacklistEvent(Player player, boolean isInWorldBlacklist) {
-        super(player);
+    companion object {
+        @JvmStatic fun getHandlerList(): HandlerList = throw MCNotInstalledException()
     }
 
-    public boolean isInWorldBlacklist() {
-        throw new MCNotInstalledException();
-    }
-    @Override
-    public HandlerList getHandlers() {
-        throw  new MCNotInstalledException();
-    }
-
-    public static HandlerList getHandlerList() {
-        throw  new MCNotInstalledException();
-    }
+    override fun getHandlers(): HandlerList = throw MCNotInstalledException()
+    fun isInWorldBlacklist(): Boolean = throw MCNotInstalledException()
 }

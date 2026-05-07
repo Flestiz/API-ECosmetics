@@ -1,17 +1,11 @@
-package ru.flestiz.ecosmetics.api;
+package ru.flestiz.ecosmetics.api
 
-import ru.flestiz.ecosmetics.utils.MCNotInstalledException;
+import ru.flestiz.ecosmetics.utils.MCNotInstalledException
 
-public enum SprayKeys {
-    SHIFT_F,
-    SHIFT_E,
-    SHIFT_Q,
-    SHIFT_LC,
-    SHIFT_RC,
-    SHIFT_JUMP,
-    API;
+enum class SprayKeys {
+    SHIFT_F, SHIFT_E, SHIFT_Q, SHIFT_LC, SHIFT_RC, SHIFT_JUMP, API;
 
-    public boolean isKey(final SprayKeys key) {
-        throw new MCNotInstalledException();
+    fun isKey(key: SprayKeys): Boolean {
+        throw MCNotInstalledException()
     }
 }

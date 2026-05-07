@@ -1,7 +1,5 @@
-package ru.flestiz.ecosmetics.events;
+package ru.flestiz.ecosmetics.events
 
-public enum Reason {
-    ITEM_IN_OFF_HAND,
-    ITEM_IN_HELMET,
-    NORMAL
+enum class Reason {
+    ITEM_IN_OFF_HAND, ITEM_IN_HELMET, NORMAL
 }

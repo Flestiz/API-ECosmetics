@@ -1,194 +1,38 @@
-package ru.flestiz.ecosmetics.cache;
+package ru.flestiz.ecosmetics.cache
 
-import ru.flestiz.ecosmetics.api.Cosmetic;
-import ru.flestiz.ecosmetics.api.CosmeticType;
-import ru.flestiz.ecosmetics.cache.cosmetics.Hat;
-import ru.flestiz.ecosmetics.cache.cosmetics.WStick;
-import ru.flestiz.ecosmetics.utils.MCNotInstalledException;
-import org.bukkit.OfflinePlayer;
+import org.bukkit.OfflinePlayer
+import ru.flestiz.ecosmetics.api.Cosmetic
+import ru.flestiz.ecosmetics.api.CosmeticType
+import ru.flestiz.ecosmetics.cache.cosmetics.Hat
+import ru.flestiz.ecosmetics.cache.cosmetics.WStick
+import ru.flestiz.ecosmetics.utils.MCNotInstalledException
+import java.util.UUID
 
-import java.util.List;
-import java.util.Map;
-import java.util.Set;
-import java.util.UUID;
-
-public class PlayerData {
-
-    /**
-     * Get the player's cosmetics
-     * @param player the player
-     * @return the player's cosmetics
-     */
-    public static PlayerData getPlayer(OfflinePlayer player){
-        throw new MCNotInstalledException();
+open class PlayerData {
+    companion object {
+        @JvmStatic fun getPlayer(player: OfflinePlayer): PlayerData = throw MCNotInstalledException()
     }
 
-    /**
-     * @return the cosmetic hat of the player
-     */
-    public Hat getHat() {
-        throw new MCNotInstalledException();
-    }
-
-    /**
-     * @return the cosmetic backpack of the player
-     */
-    public Cosmetic getBag() {
-        throw new MCNotInstalledException();
-    }
-
-    /**
-     *
-     * @return the cosmetic off_hand of the player
-     */
-    public WStick getWStick() {
-        throw new MCNotInstalledException();
-    }
-
-    /**
-     *
-     * @return the cosmetic balloon of the player
-     */
-    public Cosmetic getBalloon() {
-        throw new MCNotInstalledException();
-    }
-
-    /**
-     *
-     * @return the cosmetic spray of the player
-     */
-    public Cosmetic getSpray() {
-        throw new MCNotInstalledException();
-    }
-
-    /**
-     *
-     * this method removes the cosmetic from the player's cosmetics
-     * @param cosmeticId the cosmetic id
-     */
-    public void removeCosmetic(String cosmeticId){
-        throw new MCNotInstalledException();
-    }
-
-    /**
-     * this method sets any type of cosmetic to the player.
-     * @param cosmetic the cosmetic to set
-     */
-    public void setCosmetic(Cosmetic cosmetic){
-        throw new MCNotInstalledException();
-    }
-
-    /**
-     * @return the player UUID
-     */
-    public UUID getUniqueId() {
-        throw new MCNotInstalledException();
-    }
-
-    /**
-     * @return the offline player of this player data
-     */
-    public OfflinePlayer getOfflinePlayer() {
-        throw new MCNotInstalledException();
-    }
-
-    /**
-     * This is used when permissions are disabled.
-     * @return the player's cosmetics.
-     */
-    public Map<String, Cosmetic> getCosmetics() {
-        throw new MCNotInstalledException();
-    }
-
-    /**
-     * This is used when permissions are enabled.
-     * @return the player's cosmetics.
-     */
-    public List<Cosmetic> getCosmeticsPerm() {
-        throw new MCNotInstalledException();
-    }
-
-    /**
-     * @param id the cosmetic id
-     * @return the cosmetic with the id
-     */
-    public Cosmetic getCosmeticById(String id) {
-        throw new MCNotInstalledException();
-    }
-
-    /**
-     * @param cosmetic the cosmetic to add
-     */
-    public void addCosmetic(Cosmetic cosmetic){
-        throw new MCNotInstalledException();
-    }
-
-    /**
-     * unequip the cosmetic from the player
-     * @param id the cosmetic id
-     */
-    public void removeEquip(String id){
-        throw new MCNotInstalledException();
-    }
-
-    /**
-     * unequips the cosmetic type from the player
-     * @param cosmeticType the cosmetic type
-     */
-    public void removeEquip(CosmeticType cosmeticType){
-        throw new MCNotInstalledException();
-    }
-
-    /**
-     * get the cosmetic equipped with all its properties
-     * @param cosmeticType the cosmetic type
-     */
-
-    public Cosmetic getEquip(CosmeticType cosmeticType){
-        throw new MCNotInstalledException();
-    }
-
-    /**
-     * @return if the player is in zone
-     */
-    public boolean isZone() {
-        throw new MCNotInstalledException();
-    }
-
-    /**
-     *
-     * @return if the player is in the process of exiting the zone
-     */
-    public boolean isExitingZone() {
-        throw new MCNotInstalledException();
-    }
-
-    /**
-     *
-     * @return how many cosmetics the player is equipped with.
-     */
-    public int getEquippedCount(){
-        throw new MCNotInstalledException();
-    }
-
-    /**
-     * @return the player's cosmetics in use.
-     */
-    public Set<Cosmetic> cosmeticsInUse(){
-        throw new MCNotInstalledException();
-    }
-
-    /**
-     * hide the player's cosmetics.
-     */
-    public void hideAllCosmetics() {
-        throw new MCNotInstalledException();
-    }
-
-    /**
-     * show the player's cosmetics.
-     */
-    public void showAllCosmetics() {
-        throw new MCNotInstalledException();
-    }
+    open fun getHat(): Hat = throw MCNotInstalledException()
+    open fun getBag(): Cosmetic = throw MCNotInstalledException()
+    open fun getWStick(): WStick = throw MCNotInstalledException()
+    open fun getBalloon(): Cosmetic = throw MCNotInstalledException()
+    open fun getSpray(): Cosmetic = throw MCNotInstalledException()
+    open fun removeCosmetic(cosmeticId: String): Unit = throw MCNotInstalledException()
+    open fun setCosmetic(cosmetic: Cosmetic): Unit = throw MCNotInstalledException()
+    open fun getUniqueId(): UUID = throw MCNotInstalledException()
+    open fun getOfflinePlayer(): OfflinePlayer = throw MCNotInstalledException()
+    open fun getCosmetics(): MutableMap<String, Cosmetic> = throw MCNotInstalledException()
+    open fun getCosmeticsPerm(): MutableList<Cosmetic> = throw MCNotInstalledException()
+    open fun getCosmeticById(id: String): Cosmetic = throw MCNotInstalledException()
+    open fun addCosmetic(cosmetic: Cosmetic): Unit = throw MCNotInstalledException()
+    open fun removeEquip(id: String): Unit = throw MCNotInstalledException()
+    open fun removeEquip(cosmeticType: CosmeticType): Unit = throw MCNotInstalledException()
+    open fun getEquip(cosmeticType: CosmeticType): Cosmetic = throw MCNotInstalledException()
+    open fun isZone(): Boolean = throw MCNotInstalledException()
+    open fun isExitingZone(): Boolean = throw MCNotInstalledException()
+    open fun getEquippedCount(): Int = throw MCNotInstalledException()
+    open fun cosmeticsInUse(): MutableSet<Cosmetic> = throw MCNotInstalledException()
+    open fun hideAllCosmetics(): Unit = throw MCNotInstalledException()
+    open fun showAllCosmetics(): Unit = throw MCNotInstalledException()
 }

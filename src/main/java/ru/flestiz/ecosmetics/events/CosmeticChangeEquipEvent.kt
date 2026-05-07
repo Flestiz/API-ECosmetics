@@ -1,46 +1,27 @@
-package ru.flestiz.ecosmetics.events;
+package ru.flestiz.ecosmetics.events
 
-import ru.flestiz.ecosmetics.api.Cosmetic;
-import ru.flestiz.ecosmetics.utils.MCNotInstalledException;
-import org.bukkit.entity.Player;
-import org.bukkit.event.Cancellable;
-import org.bukkit.event.HandlerList;
-import org.bukkit.event.player.PlayerEvent;
+import org.bukkit.entity.Player
+import org.bukkit.event.Cancellable
+import org.bukkit.event.HandlerList
+import org.bukkit.event.player.PlayerEvent
+import ru.flestiz.ecosmetics.api.Cosmetic
+import ru.flestiz.ecosmetics.utils.MCNotInstalledException
 
-/**
- *  Event called when a player changes their cosmetic
- */
-public class CosmeticChangeEquipEvent extends PlayerEvent implements Cancellable {
+class CosmeticChangeEquipEvent(
+    player: Player,
+    private val oldCosmetic: Cosmetic,
+    private val newCosmetic: Cosmetic
+) : PlayerEvent(player), Cancellable {
+    init { throw MCNotInstalledException() }
 
-    public CosmeticChangeEquipEvent(Player player, Cosmetic oldCosmetic, Cosmetic newCosmetic) {
-        super(player);
-        throw new MCNotInstalledException();
+    companion object {
+        @JvmStatic fun getHandlerList(): HandlerList = throw MCNotInstalledException()
     }
 
-    @Override
-    public HandlerList getHandlers() {
-        throw new MCNotInstalledException();
-    }
+    override fun getHandlers(): HandlerList = throw MCNotInstalledException()
+    override fun isCancelled(): Boolean = throw MCNotInstalledException()
+    override fun setCancelled(cancel: Boolean): Unit = throw MCNotInstalledException()
 
-    public static HandlerList getHandlerList() {
-        throw new MCNotInstalledException();
-    }
-
-    @Override
-    public boolean isCancelled() {
-        throw new MCNotInstalledException();
-    }
-
-    @Override
-    public void setCancelled(boolean cancel) {
-        throw new MCNotInstalledException();
-    }
-
-    public Cosmetic getOldCosmetic() {
-        throw new MCNotInstalledException();
-    }
-
-    public Cosmetic getNewCosmetic() {
-        throw new MCNotInstalledException();
-    }
+    fun getOldCosmetic(): Cosmetic = throw MCNotInstalledException()
+    fun getNewCosmetic(): Cosmetic = throw MCNotInstalledException()
 }

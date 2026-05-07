@@ -1,46 +1,27 @@
-package ru.flestiz.ecosmetics.events;
+package ru.flestiz.ecosmetics.events
 
-import ru.flestiz.ecosmetics.cache.Zone;
-import ru.flestiz.ecosmetics.utils.MCNotInstalledException;
-import org.bukkit.entity.Player;
-import org.bukkit.event.Cancellable;
-import org.bukkit.event.HandlerList;
-import org.bukkit.event.player.PlayerEvent;
+import org.bukkit.entity.Player
+import org.bukkit.event.Cancellable
+import org.bukkit.event.HandlerList
+import org.bukkit.event.player.PlayerEvent
+import ru.flestiz.ecosmetics.cache.Zone
+import ru.flestiz.ecosmetics.utils.MCNotInstalledException
 
-/**
- * Event called when a player exits a zone.
- */
-public class ZoneExitEvent extends PlayerEvent implements Cancellable {
+class ZoneExitEvent(
+    player: Player,
+    private val zone: Zone,
+    private val reason: Reason
+) : PlayerEvent(player), Cancellable {
+    init { throw MCNotInstalledException() }
 
-    public ZoneExitEvent(Player player, Zone zone, Reason reason) {
-        super(player);
-        throw new MCNotInstalledException();
+    companion object {
+        @JvmStatic fun getHandlerList(): HandlerList = throw MCNotInstalledException()
     }
 
-    @Override
-    public HandlerList getHandlers() {
-        throw new MCNotInstalledException();
-    }
+    override fun getHandlers(): HandlerList = throw MCNotInstalledException()
+    override fun isCancelled(): Boolean = throw MCNotInstalledException()
+    override fun setCancelled(cancel: Boolean): Unit = throw MCNotInstalledException()
 
-    public static HandlerList getHandlerList() {
-        throw new MCNotInstalledException();
-    }
-
-    public Zone getZone() {
-        throw new MCNotInstalledException();
-    }
-
-    public Reason getReason() {
-        throw new MCNotInstalledException();
-    }
-
-    @Override
-    public boolean isCancelled() {
-        throw new MCNotInstalledException();
-    }
-
-    @Override
-    public void setCancelled(boolean cancel) {
-        throw new MCNotInstalledException();
-    }
+    fun getZone(): Zone = throw MCNotInstalledException()
+    fun getReason(): Reason = throw MCNotInstalledException()
 }

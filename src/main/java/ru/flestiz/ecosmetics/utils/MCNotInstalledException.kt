@@ -1,7 +1,3 @@
-package ru.flestiz.ecosmetics.utils;
+package ru.flestiz.ecosmetics.utils
 
-public class MCNotInstalledException extends UnsupportedOperationException {
-    public MCNotInstalledException() {
-        super("Error: ECosmetics is not installed, please install it to use this API.");
-    }
-}
+class MCNotInstalledException : UnsupportedOperationException("Error: ECosmetics is not installed, please install it to use this API.")

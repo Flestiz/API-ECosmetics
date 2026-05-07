@@ -1,83 +1,21 @@
-package ru.flestiz.ecosmetics.cache;
+package ru.flestiz.ecosmetics.cache
 
-import ru.flestiz.ecosmetics.utils.MCNotInstalledException;
-import org.bukkit.Location;
-import org.bukkit.block.Block;
+import org.bukkit.Location
+import org.bukkit.block.Block
+import ru.flestiz.ecosmetics.utils.MCNotInstalledException
 
-public class Zone {
-
-
-    /**
-     * The spray location of the zone.
-     *
-     * @return org.bukkit.Location
-     */
-    public Location getSprayLoc() {
-        throw new MCNotInstalledException();
+open class Zone {
+    companion object {
+        @JvmStatic fun getZone(id: String): Zone = throw MCNotInstalledException()
     }
 
-    /**
-     * @param id - the id of the zone.
-     * @return com.francobm.magicosmetics.cache.Zone
-     */
-    public static Zone getZone(String id) {
-        throw new MCNotInstalledException();
-    }
-
-    /**
-     * @param block - The block where the player is
-     * @return true if the player is within this zone.
-     */
-    public boolean isInZone(Block block) {
-        throw new MCNotInstalledException();
-    }
-
-    /**
-     * @return true if the zone is active
-     */
-    public boolean isActive() {
-        throw new MCNotInstalledException();
-    }
-
-    /**
-     * @return id of the zone.
-     */
-    public String getId() {
-        throw new MCNotInstalledException();
-    }
-
-    /**
-     * @return The entrance location of the zone.
-     */
-    public Location getEnter() {
-        throw new MCNotInstalledException();
-    }
-
-    /**
-     * @return The exit location of the zone.
-     */
-    public Location getExit() {
-        throw new MCNotInstalledException();
-    }
-
-    /**
-     * @return The location of the NPC in the zone.
-     */
-    public Location getNpc() {
-        throw new MCNotInstalledException();
-    }
-
-    /**
-     * @return The location of the balloon in the zone.
-     */
-    public Location getBalloon() {
-        throw new MCNotInstalledException();
-    }
-
-    /**
-     * @return The name of the zone (not equal to the id)
-     */
-    public String getName() {
-        throw new MCNotInstalledException();
-    }
+    open fun getSprayLoc(): Location = throw MCNotInstalledException()
+    open fun isInZone(block: Block): Boolean = throw MCNotInstalledException()
+    open fun isActive(): Boolean = throw MCNotInstalledException()
+    open fun getId(): String = throw MCNotInstalledException()
+    open fun getEnter(): Location = throw MCNotInstalledException()
+    open fun getExit(): Location = throw MCNotInstalledException()
+    open fun getNpc(): Location = throw MCNotInstalledException()
+    open fun getBalloon(): Location = throw MCNotInstalledException()
+    open fun getName(): String = throw MCNotInstalledException()
 }

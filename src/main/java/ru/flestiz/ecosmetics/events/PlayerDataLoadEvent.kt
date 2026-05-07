@@ -1,46 +1,22 @@
-package ru.flestiz.ecosmetics.events;
+package ru.flestiz.ecosmetics.events
 
-import ru.flestiz.ecosmetics.api.Cosmetic;
-import ru.flestiz.ecosmetics.cache.PlayerData;
-import ru.flestiz.ecosmetics.utils.MCNotInstalledException;
-import org.bukkit.event.Event;
-import org.bukkit.event.HandlerList;
+import org.bukkit.event.Event
+import org.bukkit.event.HandlerList
+import ru.flestiz.ecosmetics.api.Cosmetic
+import ru.flestiz.ecosmetics.cache.PlayerData
+import ru.flestiz.ecosmetics.utils.MCNotInstalledException
 
-import java.util.Set;
+class PlayerDataLoadEvent(
+    private val playerData: PlayerData,
+    private val equippedCosmetics: MutableSet<Cosmetic>
+) : Event(true) {
+    init { throw MCNotInstalledException() }
 
-/**
- *  The event is called when the player's data has just been loaded.
- *  This event is asynchronous
- */
-public class PlayerDataLoadEvent extends Event {
-
-    public PlayerDataLoadEvent(PlayerData playerData, Set<Cosmetic> equippedCosmetics){
-        super(true);
-        throw new MCNotInstalledException();
+    companion object {
+        @JvmStatic fun getHandlerList(): HandlerList = throw MCNotInstalledException()
     }
 
-    @Override
-    public HandlerList getHandlers() {
-        throw  new MCNotInstalledException();
-    }
-
-    public static HandlerList getHandlerList() {
-        throw  new MCNotInstalledException();
-    }
-
-    /**
-     * Player whose data has been uploaded
-     * @return PlayerData
-     */
-    public PlayerData getPlayerData() {
-        throw  new MCNotInstalledException();
-    }
-
-    /**
-     * Cosmetics that have been loaded and are now being equipped to the player.
-     * @return cosmetics being used by the player
-     */
-    public Set<Cosmetic> getEquippedCosmetics() {
-        throw  new MCNotInstalledException();
-    }
+    override fun getHandlers(): HandlerList = throw MCNotInstalledException()
+    fun getPlayerData(): PlayerData = throw MCNotInstalledException()
+    fun getEquippedCosmetics(): MutableSet<Cosmetic> = throw MCNotInstalledException()
 }
